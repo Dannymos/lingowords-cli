@@ -2,5 +2,5 @@ dist: xenial
 language: java
 jdk:
   - openjdk14
-script:
+after_success:
   - mvn clean test jacoco:report coveralls:report
