@@ -45,6 +45,7 @@
                 <version>4.3.0</version>
                 <configuration>
                     <repoToken>rdfJv1nTd7kqf0h0sWRR3voffbV0y9Xkc</repoToken>
+                    <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
                 </configuration>
             </plugin>
         </plugins>
@@ -53,6 +54,7 @@
 
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
