@@ -2,3 +2,5 @@
 
 To submit a list of words, set the filepath in Main and then run Main.
 This does require the lingogame server to be running.
+
+Danny Mostert
