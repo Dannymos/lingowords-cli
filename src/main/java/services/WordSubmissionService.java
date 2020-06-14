@@ -16,7 +16,7 @@ public class WordSubmissionService {
     private HttpClient httpClient;
 
     public WordSubmissionService() {
-        this.url = "http://localhost/word";
+        this.url = "http://localhost:3000/word";
         this.httpClient = HttpClientBuilder.create().build();
     }
 
