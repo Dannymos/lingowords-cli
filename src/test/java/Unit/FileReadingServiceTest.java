@@ -1,5 +1,6 @@
 package Unit;
 
+import model.Word;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -25,27 +26,27 @@ public class FileReadingServiceTest {
 
     @Test
     public void shouldReturnNullWhenInvalidFilepathIsProvided() {
-        ArrayList<String> result = fileReadingService.readFile("aninvalidpath");
+        ArrayList<Word> result = fileReadingService.readFile("aninvalidpath");
         Assert.assertNull(result);
     }
 
     @Test
     public void shouldReturnEmptyListWhenEmptyFileIsProvided() {
-        ArrayList<String> result = fileReadingService.readFile("src/test/java/resources/testFileWithoutWords.txt");
+        ArrayList<Word> result = fileReadingService.readFile("src/test/java/resources/testFileWithoutWords.txt");
         Assert.assertEquals(result.size(), 0);
     }
 
     @Test
     public void shouldReturnListWhenFileWithValidWordsIsProvided() {
         when(wordValidationServiceMock.validateWord("aaaaa")).thenReturn(true);
-        ArrayList<String> result = fileReadingService.readFile("src/test/java/resources/testFileWithValidWord.txt");
+        ArrayList<Word> result = fileReadingService.readFile("src/test/java/resources/testFileWithValidWord.txt");
         Assert.assertNotEquals(result.size(), 0);
     }
 
     @Test
     public void shouldReturnEmptyListWhenFileWithInvalidWordsIsProvided() {
         when(wordValidationServiceMock.validateWord("aaaa")).thenReturn(false);
-        ArrayList<String> result = fileReadingService.readFile("src/test/java/resources/testFileWithValidWord.txt");
+        ArrayList<Word> result = fileReadingService.readFile("src/test/java/resources/testFileWithValidWord.txt");
         Assert.assertEquals(result.size(), 0);
     }
 }
