@@ -7,7 +7,6 @@ import org.mockito.Mock;
 import services.FileReadingService;
 import services.WordValidationService;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 import static org.mockito.Mockito.mock;
