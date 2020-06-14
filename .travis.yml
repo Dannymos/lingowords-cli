@@ -2,3 +2,5 @@ dist: xenial
 language: java
 jdk:
   - openjdk14
+script:
+  - - mvn clean coveralls:report
